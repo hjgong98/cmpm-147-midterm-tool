@@ -27,27 +27,22 @@
 
         <div class="room-types">
           <h3>Room Types & Chances</h3>
-          <ul id="roomList">
-            <li>
-              <span class="color-box" style="background: #f0f0f0"></span> Empty
-              Room: <span class="percent">50%</span>
-            </li>
-            <li>
-              <span class="color-box" style="background: #ffcccc"></span> Combat
-              Room: <span class="percent">15%</span>
-            </li>
-            <li>
-              <span class="color-box" style="background: #ccffcc"></span> Puzzle
-              Room: <span class="percent">15%</span>
-            </li>
-            <li>
-              <span class="color-box" style="background: #ccccff"></span> Chest
-              Room: <span class="percent">20%</span>
-            </li>
-          </ul>
-          <p class="note">
-            Total: 100% (the empty room changes if others change)
-          </p>
+          <div id="roomControls">
+            <!-- Room controls will be added here by JavaScript -->
+          </div>
+
+          <div class="add-room-section">
+            <button id="addRoomBtn" class="small-button">
+              + Add New Room Type
+            </button>
+          </div>
+
+          <div class="total-section">
+            <p>Total: <span id="totalPercent">100</span>%</p>
+            <p id="errorMessage" class="error-message" style="display: none">
+              Total must be exactly 100%!
+            </p>
+          </div>
         </div>
 
         <button id="makeMaze" class="big-button">Generate</button>
@@ -67,21 +62,8 @@
 
         <div class="key">
           <h3>What the colors mean:</h3>
-          <div class="key-items">
-            <div><div class="key-color start"></div> Start</div>
-            <div><div class="key-color exit"></div> Exit</div>
-            <div>
-              <div class="key-color" style="background: #f0f0f0"></div> Empty
-            </div>
-            <div>
-              <div class="key-color" style="background: #ffcccc"></div> Combat
-            </div>
-            <div>
-              <div class="key-color" style="background: #ccffcc"></div> Puzzle
-            </div>
-            <div>
-              <div class="key-color" style="background: #ccccff"></div> Chest
-            </div>
+          <div id="keyItems" class="key-items">
+            <!-- Key items will be added here by JavaScript -->
           </div>
         </div>
       </div>
