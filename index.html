@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maze Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Maze Generator Tool</h1>
+      <p class="description">maze generator tool for midterm assignment</p>
 
+      <div class="controls">
+        <h2>Maze Settings</h2>
+
+        <div class="slider-box">
+          <div class="slider-item">
+            <p>Maze Width: <span id="widthNum">10</span></p>
+            <input type="range" id="widthSlider" min="5" max="20" value="10">
+          </div>
+
+          <div class="slider-item">
+            <p>Maze Height: <span id="heightNum">10</span></p>
+            <input type="range" id="heightSlider" min="5" max="20" value="10">
+          </div>
+        </div>
+
+        <div class="room-types">
+          <h3>Room Types & Chances</h3>
+          <ul id="roomList">
+            <li>
+              <span class="color-box" style="background: #f0f0f0"></span> Empty
+              Room: <span class="percent">50%</span>
+            </li>
+            <li>
+              <span class="color-box" style="background: #ffcccc"></span> Combat
+              Room: <span class="percent">15%</span>
+            </li>
+            <li>
+              <span class="color-box" style="background: #ccffcc"></span> Puzzle
+              Room: <span class="percent">15%</span>
+            </li>
+            <li>
+              <span class="color-box" style="background: #ccccff"></span> Chest
+              Room: <span class="percent">20%</span>
+            </li>
+          </ul>
+          <p class="note">
+            Total: 100% (the empty room changes if others change)
+          </p>
+        </div>
+
+        <button id="makeMaze" class="big-button">Generate</button>
+      </div>
+
+      <div class="maze-area">
+        <h2>Maze</h2>
+        <div class="maze-info">
+          <p>Size: <span id="sizeDisplay">10x10</span></p>
+          <p>Start at: <span id="startDisplay">(0,0)</span></p>
+          <p>Exit options: <span id="exitDisplay">0</span></p>
+        </div>
+
+        <div id="maze" class="maze">
+          <!-- Maze goes here -->
+        </div>
+
+        <div class="key">
+          <h3>What the colors mean:</h3>
+          <div class="key-items">
+            <div><div class="key-color start"></div> Start</div>
+            <div><div class="key-color exit"></div> Exit</div>
+            <div>
+              <div class="key-color" style="background: #f0f0f0"></div> Empty
+            </div>
+            <div>
+              <div class="key-color" style="background: #ffcccc"></div> Combat
+            </div>
+            <div>
+              <div class="key-color" style="background: #ccffcc"></div> Puzzle
+            </div>
+            <div>
+              <div class="key-color" style="background: #ccccff"></div> Chest
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Made for my midterm project. Uses JavaScript to make the maze.</p>
+      </div>
+    </div>
+  </body>
+</html>
